@@ -4,13 +4,16 @@ import Card from 'react-bootstrap/Card';
 import RestaurantCard from '../components/RestaurantCard';
 // import Grid from '@material-ui/core/';
 
-const HomeScreen = () => {
+export default function HomeScreen() {
   return (
     // <Grid container spacing={24}>
     //   <Grid item md={3}>
+    <h1> hello </h1>,
+    <div>
     RestaurantCard(),
     RestaurantCard(),
     RestaurantCard()
+    </div>
     //   </Grid>
     //   <Grid item md={3}>
     //   </Grid>
@@ -19,4 +22,3 @@ const HomeScreen = () => {
     // </Grid>
   )
 }; 
-export default HomeScreen;
