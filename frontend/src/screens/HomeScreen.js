@@ -9,7 +9,7 @@ export default function HomeScreen() {
   const [post, setPost] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(`/get-restaurant/*`).then((response) => {
+    axios.get('/get-restaurant/{id}').then((response) => {
       setPost(response.data);
     });
   }, []);
