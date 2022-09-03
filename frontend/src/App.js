@@ -31,10 +31,10 @@ function App() {
 			<main>
 				<Container>
 					<Routes>
-						<Route path="/" element={HomeScreen} />
-						<Route path="/profile" element={ProfileScreen} />
-						<Route path="/restaurants/:id" element={RestaurantScreen} />
-						<Route path="/share" element={ShareScreen.js} />
+						<Route path="/" element={<HomeScreen />} />
+						<Route path="/profile" element={<ProfileScreen />} />
+						<Route path="/restaurants/:id" element={<RestaurantScreen />} />
+						<Route path="/share" element={<ShareScreen />} />
 					</Routes>
 				</Container>
 			</main>
