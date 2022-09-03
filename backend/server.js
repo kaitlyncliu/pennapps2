@@ -2,7 +2,6 @@ import express, { application } from 'express';
 import path from 'path';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import axios from 'axios';
 import restaurantRouter from './routes/restaurantRoutes.js';
 import userRouter from './routes/userRoutes.js';
 

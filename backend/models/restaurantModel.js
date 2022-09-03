@@ -6,6 +6,7 @@ const restaurantSchema = new mongoose.Schema({
 	address: { type: String, required: true },
 	relativePortionSize: { type: Number, required: true },
 	image: { type: String, required: true },
+	description: { type: String, required: false },
 });
 
 const Restaurant = new mongoose.Model('Restaurant', restaurantSchema);
