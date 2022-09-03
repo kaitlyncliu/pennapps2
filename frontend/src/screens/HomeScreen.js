@@ -1,19 +1,21 @@
 import React from 'react';
 import axios from 'axios';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import RestaurantCard from '../components/RestaurantCard';
-// import Grid from '@material-ui/core/';
 
 export default function HomeScreen() {
   const [post, setPost] = React.useState(null);
+  const getResponse = async () => {
+    try {
+      const res = await axios.get('/get-restaurant/1')
+      console.log(res.data)
+      setPost(res.data);
+    } catch(err) {
+      console.log('err')
+    }
+  }
 
-  React.useEffect(() => {
-    axios.get('/get-restaurant/{id}').then((response) => {
-      setPost(response.data);
-    });
-  }, []);
-  
+  getResponse()
+
   return (
     <RestaurantCard name={post.name}
                     address={post.address}

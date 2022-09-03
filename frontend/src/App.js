@@ -34,7 +34,7 @@ function App() {
 						<Route path="/" element={<HomeScreen />} />
 						<Route path="/profile" element={<ProfileScreen />} />
 						<Route path="/restaurants/:id" element={<RestaurantScreen />} />
-						<Route path="/share" element={<ShareScreen />} />
+						{/* <Route path="/share" element={<ShareScreen />} /> */}
 					</Routes>
 				</Container>
 			</main>
