@@ -1,19 +1,25 @@
 import React from 'react';
+import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import RestaurantCard from '../components/RestaurantCard';
 // import Grid from '@material-ui/core/';
 
 export default function HomeScreen() {
+  const [post, setPost] = React.useState(null);
+
+  React.useEffect(() => {
+    axios.get(`/get-restaurant/*`).then((response) => {
+      setPost(response.data);
+    });
+  }, []);
+  
   return (
-    // <Grid container spacing={24}>
-    //   <Grid item md={3}>
-    <RestaurantCard />
-    //   </Grid>
-    //   <Grid item md={3}>
-    //   </Grid>
-    //   <Grid item md={3}>
-    //   </Grid>
-    // </Grid>
+    <RestaurantCard name={post.name}
+                    address={post.address}
+                    relativePortionSize={post.relativePortionSize}
+                    image={post.image}>
+    </RestaurantCard>
+   
   );
 }; 
