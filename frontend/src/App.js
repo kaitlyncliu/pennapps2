@@ -1,28 +1,32 @@
-import logo from './logo.svg';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import './App.css';
+import Container from 'react-bootstrap/Container';
+import { LinkContainer } from 'react-router-bootstrap';
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import Button from 'react-bootstrap/Button';
 
 function App() {
 	return (
-		<div className="App">
-			<BrowserRouter>
-				<Navbar variant="tabs" defaultActiveKey="/home">
+		<BrowserRouter>
+			<header>
+				<Nav expand="lg">
 					<Nav.Item>
-						<Nav.Link href="/home">Active</Nav.Link>
+						<Link to="/">Home</Link>
 					</Nav.Item>
 					<Nav.Item>
-						<Nav.Link eventKey="link-1">Option 2</Nav.Link>
+						<Link to="/profile">Profile</Link>
 					</Nav.Item>
 					<Nav.Item>
-						<Nav.Link eventKey="disabled" disabled>
-							Disabled
-						</Nav.Link>
+						<Link to="/social">Social</Link>
 					</Nav.Item>
-				</Navbar>
-			</BrowserRouter>
-		</div>
+				</Nav>
+			</header>
+			<main>
+				<Container></Container>
+			</main>
+		</BrowserRouter>
 	);
 }
 
