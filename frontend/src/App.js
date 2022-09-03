@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
 import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import RestaurantScreen from './screens/RestaurantScreen';
+import ShareScreen from './screens/ShareScreen';
 import Button from 'react-bootstrap/Button';
 
 function App() {
@@ -28,7 +30,14 @@ function App() {
 				</Navbar>
 			</header>
 			<main>
-				<Container></Container>
+				<Container>
+					<Routes>
+						<Route path="/" element={HomeScreen} />
+						<Route path="/profile" element={ProfileScreen} />
+						<Route path="/restaurants/:id" element={RestaurantScreen} />
+						<Route path="/share" element={ShareScreen.js} />
+					</Routes>
+				</Container>
 			</main>
 		</BrowserRouter>
 	);
