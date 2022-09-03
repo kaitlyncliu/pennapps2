@@ -15,16 +15,15 @@ function App() {
 			<header>
 				<Navbar fixed="bottom" bg="dark" variant="dark" expand="lg">
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
-
 					<Nav>
 						<Container>
-							<Nav.Link href="#home">Home</Nav.Link>
+							<Nav.Link href="/">Home</Nav.Link>
 						</Container>
 						<Container>
-							<Nav.Link href="#profile">Profile</Nav.Link>
+							<Nav.Link href="/profile">Profile</Nav.Link>
 						</Container>
 						<Container>
-							<Nav.Link href="#social">Social</Nav.Link>
+							<Nav.Link href="/social">Social</Nav.Link>
 						</Container>
 					</Nav>
 				</Navbar>
