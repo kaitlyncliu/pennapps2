@@ -13,9 +13,7 @@ export default function HomeScreen() {
       console.log('err')
     }
   }
-
   getResponse()
-
   return (
     <RestaurantCard name={post.name}
                     address={post.address}
