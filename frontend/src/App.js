@@ -11,17 +11,21 @@ function App() {
 	return (
 		<BrowserRouter>
 			<header>
-				<Nav expand="lg">
-					<Nav.Item>
-						<Link to="/">Home</Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Link to="/profile">Profile</Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Link to="/social">Social</Link>
-					</Nav.Item>
-				</Nav>
+				<Navbar fixed="bottom" bg="dark" variant="dark" expand="lg">
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+					<Nav>
+						<Container>
+							<Nav.Link href="#home">Home</Nav.Link>
+						</Container>
+						<Container>
+							<Nav.Link href="#profile">Profile</Nav.Link>
+						</Container>
+						<Container>
+							<Nav.Link href="#social">Social</Nav.Link>
+						</Container>
+					</Nav>
+				</Navbar>
 			</header>
 			<main>
 				<Container></Container>
