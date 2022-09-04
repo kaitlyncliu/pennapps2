@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+**/node_modules
 /.pnp
 .pnp.js
 .env
@@ -22,3 +22,21 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+backend/node_modules/.bin/mime.cmd
+backend/node_modules/.bin/mime.ps1
+backend/node_modules/.bin/nodemon
+backend/node_modules/.bin/nodemon.cmd
+backend/node_modules/.bin/nodemon.ps1
+backend/node_modules/.bin/nodetouch
+backend/node_modules/.bin/nodetouch.cmd
+backend/node_modules/.bin/nodetouch.ps1
+backend/node_modules/.bin/nopt
+backend/node_modules/.bin/nopt.cmd
+backend/node_modules/.bin/nopt.ps1
+backend/node_modules/.bin/semver
+backend/node_modules/.bin/semver.cmd
+backend/node_modules/.bin/semver.ps1
+backend/node_modules/.package-lock.json
+backend/node_modules/@types/node/assert.d.ts
+backend/node_modules/@types/node/assert/strict.d.ts
+backend/node_modules/@types/node/async_hooks.d.ts
