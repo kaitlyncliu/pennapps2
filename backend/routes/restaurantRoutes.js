@@ -3,10 +3,10 @@ import Restaurant from '../models/restaurantModel.js'
 
 const restaurantRouter = express.Router();
 
-restaurantRouter.get('/:portion', (req, res) => { 
+restaurantRouter.get('/:portion', async (req, res) => { 
     console.log("Starting find")
-    Restaurant.find({name:'Mcdonalds'})
-        // relativePortionSize: req.params.portion})
+    await Restaurant.find({name:'Mcdonalds'})
+        // relativePortionSize: req.para ms.portion})
                 .then(result => {
                     console.log("Received restaurant info");
                     res.send(result)

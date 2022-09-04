@@ -7,16 +7,21 @@ import userRouter from './routes/userRoutes.js';
 
 dotenv.config();
 
-mongoose
-	.connect(process.env.MONGODB_URI)
-	.then(() => {
-		console.log('connected to db');
-	})
-	.catch((err) => {
-		console.log(err.message);
-	});
-
 const app = express();
+
+const mongoDB = 'mongodb+srv://dangelic:mongodb@cluster0.avdoc6k.mongodb.net/test';
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+// mongoose
+// 	.connect('mongodb+srv://dangelic:mongodb@cluster0.avdoc6k.mongodb.net/test')
+// 	.then(() => {
+// 		console.log('connected to db');
+// 	})
+// 	.catch((err) => {
+// 		console.log(err.message);
+// 	});
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
