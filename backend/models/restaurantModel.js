@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import RestaurantScreen from '../../frontend/src/screens/RestaurantScreen';
 
 const restaurantSchema = new mongoose.Schema({
 	name: { type: String, required: true },
@@ -9,5 +8,5 @@ const restaurantSchema = new mongoose.Schema({
 	description: { type: String, required: false },
 });
 
-const Restaurant = new mongoose.Model('Restaurant', restaurantSchema);
+const Restaurant = new mongoose.model('Restaurant', restaurantSchema);
 export default Restaurant;
